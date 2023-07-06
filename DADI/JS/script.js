@@ -48,17 +48,23 @@
  
 
             // BONUS CON ARRAY //
-
-const genera =  document.querySelector(".genera")
-genera.addEventListener("click", function () {
-let container = [];
-
-const getFirstNum = document.querySelector("[name='num1']");
+            const getFirstNum = document.querySelector("[name='num1']");
 const insertFirstNum = getFirstNum.value;
 const getSecNum = document.querySelector("[name='num2']");
 const insertSecNum = getSecNum.value;
 const getThNum = document.querySelector("[name='num3']");
 const insertThNum = getThNum.value;
+
+const genera =  document.querySelector(".genera")
+genera.addEventListener("click", function () {
+let container = [];
+
+// const getFirstNum = document.querySelector("[name='num1']");
+// const insertFirstNum = getFirstNum.value;
+// const getSecNum = document.querySelector("[name='num2']");
+// const insertSecNum = getSecNum.value;
+// const getThNum = document.querySelector("[name='num3']");
+// const insertThNum = getThNum.value;
 container.push(insertFirstNum, insertSecNum, insertThNum ) 
 let sumPlayer = 0;
 
@@ -96,7 +102,8 @@ if (pcSumNumber >  sumPlayer) {
 
 
 const annulla =  document.querySelector(".annulla")
-annulla.addEventListener("click", function () {
+annulla.addEventListener("click", function goBack() {
+    window.history.go(0);
     document.getElementById("Pc").innerHTML = ""
     document.getElementById("player").innerHTML = ""
     document.getElementById("risultato").innerHTML = ""
