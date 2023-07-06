@@ -7,35 +7,38 @@
 
 
 // creo array di e-mail 
-const arrayEmail = ["mariorossi@gmail.com", "giovannigalli@gmail.com", "stefanograssi@tiscali.it","lucabianchi@libero.it", "carlovanzini@yahoo.com"];
+const arrayEmail = ["mariorossi@gmail.com", "giovannigalli@gmail.com", "stefanograssi@tiscali.it", "lucabianchi@libero.it", "carlovanzini@yahoo.com"];
+
+ // 'chiedo all'utente la sua mail
+ const getEmail = document.querySelector("[name='e-mail']");
 
 // seleziono button genera per creare evento al click 
 const genera = document.querySelector(".genera")
 
+
 // genero evento al click
 genera.addEventListener("click", function () {
-   
-// 'chiedo all'utente la sua mail
-const getEmail = document.querySelector("[name='e-mail']");
-const insertEmail = getEmail.value;
-let emailFind = false;
 
-// // creo costante email utente corretta per poter accedere 
+  
+    const insertEmail = getEmail.value;
+    let emailFind = false;
 
-for (let i = 0; i < arrayEmail.length; i++) {
-//    console.log(arrayEmail[i]);
-const currentEmail = arrayEmail[i];
-if (insertEmail  === currentEmail ) {
-  console.log("email trovata " + 1);
-  emailFind = true;
-}   
-};
-if (emailFind === true) {
-  document.getElementById("mail_message").innerHTML = "E-MAIL TROVATA"; 
+    // // creo costante email utente corretta per poter accedere 
 
-}else{
-    document.getElementById("mail_message").innerHTML = "E-MAIL NON TROVATA";  
-}
+    for (let i = 0; i < arrayEmail.length; i++) {
+        //    console.log(arrayEmail[i]);
+        const currentEmail = arrayEmail[i];
+        if (insertEmail === currentEmail) {
+            console.log("email trovata " + 1);
+            emailFind = true;
+        }
+    };
+    if (emailFind === true) {
+        document.getElementById("mail_message").innerHTML = "E-MAIL TROVATA";
+
+    } else {
+        document.getElementById("mail_message").innerHTML = "E-MAIL NON TROVATA";
+    }
 
 });
 
@@ -43,14 +46,13 @@ if (emailFind === true) {
 // seleziono button annulla per creare evento al click 
 const annulla = document.querySelector(".annulla")
 
-annulla.addEventListener("click", function () {
- 
-    function Refresh() {
-        window.parent.location = window.parent.location.href;
-     
-    }
-    
-});
+annulla.addEventListener("click",
+    function goBack() {
+        document.getElementById("mail_message").innerHTML = "";
+        document.getElementById("mail_message").innerHTML = "";
+        getEmail.value = "";
+
+    });
 
 
 

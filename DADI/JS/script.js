@@ -49,22 +49,22 @@
 
             // BONUS CON ARRAY //
             const getFirstNum = document.querySelector("[name='num1']");
-const insertFirstNum = getFirstNum.value;
+// const insertFirstNum = getFirstNum.value;
 const getSecNum = document.querySelector("[name='num2']");
-const insertSecNum = getSecNum.value;
+// const insertSecNum = getSecNum.value;
 const getThNum = document.querySelector("[name='num3']");
-const insertThNum = getThNum.value;
+// const insertThNum = getThNum.value;
 
 const genera =  document.querySelector(".genera")
 genera.addEventListener("click", function () {
 let container = [];
 
-// const getFirstNum = document.querySelector("[name='num1']");
-// const insertFirstNum = getFirstNum.value;
-// const getSecNum = document.querySelector("[name='num2']");
-// const insertSecNum = getSecNum.value;
-// const getThNum = document.querySelector("[name='num3']");
-// const insertThNum = getThNum.value;
+
+const insertFirstNum = getFirstNum.value;
+
+const insertSecNum = getSecNum.value;
+
+const insertThNum = getThNum.value;
 container.push(insertFirstNum, insertSecNum, insertThNum ) 
 let sumPlayer = 0;
 
